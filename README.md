@@ -41,19 +41,19 @@ class App extends React.Component {
 
 ## Properties
 
-### highlight
+#### highlight
 
 String to be highlighted.
 
-### text
+#### text
 
 Text to look for highlighted value.
 
-### markTag
+#### markTag
 
 The HTML element name for the highlighted text, the default is `mark`.
 
-### caseSensitive
+#### caseSensitive
 
 Boolean value for case sensitive search, the default is `false`.
 
