@@ -1,0 +1,5 @@
+/* styling not present on IE9 */
+mark {
+  background: #ff0;
+  color: #000;
+}
