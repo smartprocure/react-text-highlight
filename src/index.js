@@ -27,7 +27,6 @@ export default class TextHighlight extends React.Component {
 
     var escape = val.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
     var tagStr = '<{tag}>$&</{tag}>';
-    var caseSensitive = this.props.cas
 
     markTag = markTag || 'mark';
 
@@ -56,8 +55,8 @@ TextHighlight.propTypes = {
 };
 
 TextHighlight.defaultProps = {
-  highlight: '',
-  text: '',
+  highlight: null,
+  text: null,
   markTag: 'mark',
   caseSensitive: false
 };
