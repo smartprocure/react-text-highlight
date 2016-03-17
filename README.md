@@ -1,6 +1,12 @@
-# react-text-highlight
+# No Maintenance Intended
 
-Simple React component for highlight a text.
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
+<img src='https://media.giphy.com/media/h9hoPqk7Db5fi/giphy.gif' height='200'>
+
+This project is no longer actively maintained.
+
+---
 
 ## Demo
 
