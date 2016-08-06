@@ -2,7 +2,7 @@
   "name": "react-text-highlight",
   "version": "0.1.1",
   "description": "Simple React component for highlight a text",
-  "main": "./dist/index.js",
+  "main": "./dist/ReactStringHighlight.min.js",
   "scripts": {
     "examples": "./scripts/examples",
     "build": "./scripts/build"
