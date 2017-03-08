@@ -6,6 +6,7 @@ module.exports = {
 
   output: {
     path: 'dist',
+    libraryTarget: 'umd',
     filename: 'ReactStringHighlight.min.js'
   },
 
