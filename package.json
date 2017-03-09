@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/henriquea/react-text-highlight",
   "dependencies": {
-    "react": "^15.4.2"
+    "react": "~15.3.1"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
