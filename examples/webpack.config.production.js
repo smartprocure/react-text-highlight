@@ -19,8 +19,8 @@ module.exports = {
 
   module: {
     loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader']},
-      {test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader')}
+      {test: /\.(js|jsx)$/, exclude: /node_modules/, loaders: ['babel-loader']},
+      {test: /\.css$/, loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' })}
     ]
   },
 
