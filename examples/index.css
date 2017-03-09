@@ -1,2 +1,6 @@
-mark{background:#ff0;color:#000}
+/* styling not present on IE9 */
+mark {
+  background: #ff0;
+  color: #000;
+}
 /*# sourceMappingURL=index.css.map*/
