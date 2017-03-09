@@ -13,8 +13,7 @@ export default class TextHighlight extends React.Component {
   }
 
   updateDOM() {
-    var el = React.findDOMNode(this.text);
-    el.innerHTML = this.mark(
+    this.text.innerHTML = this.mark(
       this.props.highlight,
       this.props.text,
       this.props.markTag,
