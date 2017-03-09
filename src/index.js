@@ -13,7 +13,7 @@ export default class TextHighlight extends React.Component {
   }
 
   updateDOM() {
-    var el = React.findDOMNode(this.refs.text);
+    var el = React.findDOMNode(this.text);
     el.innerHTML = this.mark(
       this.props.highlight,
       this.props.text,
@@ -42,7 +42,7 @@ export default class TextHighlight extends React.Component {
 
   render() {
     return (
-      <span className="TextHighlight" ref="text"></span>
+      <span className="TextHighlight" ref={ el => this.text = el }></span>
     );
   }
 }
