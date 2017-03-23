@@ -2,7 +2,7 @@ import './index.css';
 
 import React from 'react';
 
-export default class TextHighlight extends React.Component {
+class TextHighlight extends React.Component {
 
   componentDidMount() {
     this.updateDOM();
@@ -22,10 +22,10 @@ export default class TextHighlight extends React.Component {
   }
 
   mark(val, str, markTag, caseSensitive) {
-    val = val || '';
+    val = (Array.isArray(val) && val) || [val]
 
-    var escape = val.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&');
-    var tagStr = '<{tag}>$&</{tag}>';
+    var words = val.map((word) => word.replace(/[-\\^$*+?.()|[\]{}]/g, '\\$&'));
+    var tagStr = `<{tag} class=${this.props.className}>$&</{tag}>`;
 
     markTag = markTag || 'mark';
 
@@ -33,10 +33,7 @@ export default class TextHighlight extends React.Component {
       return str;
     }
 
-    return str.replace(
-      RegExp(escape, caseSensitive ? 'g':'gi'),
-      tagStr.replace(/{tag}/gi, markTag)
-    );
+    return words.reduce((str, word) => str.replace(RegExp(word, caseSensitive ? 'g':'gi'), tagStr.replace(/{tag}/gi, markTag)), str);
   }
 
   render() {
@@ -47,7 +44,11 @@ export default class TextHighlight extends React.Component {
 }
 
 TextHighlight.propTypes = {
-  highlight: React.PropTypes.string.isRequired,
+  highlight: React.PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array
+  ]),
+  className: PropTypes.string,
   text: React.PropTypes.string.isRequired,
   markTag: React.PropTypes.string,
   caseSensitive: React.PropTypes.bool
