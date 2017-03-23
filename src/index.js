@@ -45,10 +45,10 @@ export default class TextHighlight extends React.Component {
 
 TextHighlight.propTypes = {
   highlight: React.PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.array
+    React.PropTypes.string,
+    React.PropTypes.array
   ]),
-  className: PropTypes.string,
+  className: React.PropTypes.string,
   text: React.PropTypes.string.isRequired,
   markTag: React.PropTypes.string,
   caseSensitive: React.PropTypes.bool
