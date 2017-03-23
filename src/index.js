@@ -2,7 +2,7 @@ import './index.css';
 
 import React from 'react';
 
-class TextHighlight extends React.Component {
+export default class TextHighlight extends React.Component {
 
   componentDidMount() {
     this.updateDOM();
